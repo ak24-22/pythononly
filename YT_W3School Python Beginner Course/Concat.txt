@@ -1,0 +1,14 @@
+print("Ways to use concatenation are: \n")
+
+var1 = "Monsters"
+print("!) String + Variable:\n")
+print(" a. Shrek School Academy are for " + var)
+print(" b. We " + var + "will kill  you")
+print(" c. " + var + " are here!"
+
+phrase = "Monsters"
+print ("2) String {}.format(Variable")
+print (" a. Shrek School Academy are for \"{}\"".format(phrase))
+print (" b.  {} is here to save us".format(phrase))
+print (" c.  BANK ROBBER:\"Oh no, it's {}, RUN!\" ".format(phrase))
+
