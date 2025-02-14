@@ -15,7 +15,7 @@ print('Hello World!') # using ' ' can also be used to print anything
 
 print("""Using these triple quotations allows you to print mulple lines at once""")
 
-a = """ i am the best of the bats
+a = """ i am thw bes of the bats
 oh yh 
 dont mess
 with me
@@ -78,40 +78,35 @@ print("Snake Case:\n", "Each word is Separated with '_'\n", "E.g.The_Dark_Knight
 
 """
 Python has different data types that are built-in
-|_____________________________________________________________________|
-|Type <=======>   Data    <==============>         Example            |
-|_____________________________________________________________________|
-|Numeric  <-------> int, float & complex           x = 6              |
-|---------------------------------------------------------------------|
-|Text     <-------> str                            x = "Spider-Man"   |
-|---------------------------------------------------------------------|
-|Sequence <-------> list, tuple & range                               |
-----------------------------------------------------------------------|
-|Mapping  <-------> dict         x = {"names" : "Jack", "age" : "23"} |
-|---------------------------------------------------------------------|
-|Set      <-------> set & frozenset                                   |
-|---------------------------------------------------------------------|
-|Boolean  <-------> bool                           x = True           |
-|---------------------------------------------------------------------|
-|Binary   <-------> bytes, bytearry & memoryview                      |
-|---------------------------------------------------------------------|
-|None     <-------> NoneType                       x = None           |
-|_____________________________________________________________________|
-
-************************************************************************
+_____________________________________________________________________________________________________________
+Type     <=======> Data                             <==============> Example                                |
+____________________________________________________________________________________________________________
+Numeric  <-------> int, float & complex         <------------------> x = 6
+Text     <-------> str                          <------------------> x = "Spider-Man"
+Sequence <-------> list, tuple & range   
+Mapping  <-------> dict                                              x = {"names" : "Jack", "age" : "23"}
+Set      <-------> set & frozenset
+Boolean  <-------> bool                         <------------------> x = True
+Binary   <-------> bytes, bytearry & memoryview 
+None     <-------> NoneType                     <------------------> x = None 
+____________________________________________________________________________________________________________
+************************************************************************************************************
 Examples of Sequence Types >>
 List:  x = ["apples", "bananas", "pears"] 
 Tuple: x = ([)"apples", "bananas", "pears")
 Range: x = range = (9)
-************************************************************************
+************************************************************************************************************
 Examples of Mapping Types >>
 Set:  x = {"apples", "bananas", "pears"} 
 Frozenset: x = ({"apples", "bananas", "pears"})
-***********************************************************************
+************************************************************************************************************
 Examples of Binary Types >>
 Byte:       x = b"Hello"
 Bytearray:  x = bytearray(2)
 Memoryview: x = memoryview(byte(8)
+
+
+
 
 """
 
@@ -143,7 +138,6 @@ phrase = "Shrek School Academy" #Giving a String a variable and then pringing it
 print(phrase + " Are For =\n \"Monsters\"") #taking a string and adding another string to it (aka: Concatenation)
 print(phrase.lower()) #this is a function that changes the string or text to lower case.
 # To make it all upper case just put phrase.upper()
-# To make first letter only upper case just put phrase.capitalize()
 print(len(phrase)) #This Function tells us how many characters are in the string (I.E. The Length
 print(phrase[0]) #This function tells you what the character number. These strings start at 0 and contibue
 print(phrase.index("S")) #This function finds the letter in the string and prints it as a number.
@@ -154,8 +148,6 @@ print(movie)
 print(movie.isupper()) #This function is True/False so Boolean
 print(movie.upper().isupper()) #This function converts the String to all caps than says it is true
 print(movie.replace("dark","moon")) #Changes a selected word for something else
-film = "Dragon and Tiger Gates"
-print(film.startswith("Gates")) #This checks to see if a selected word starts at the beginning of the string 
 
 quantity = 5
 items = 654
@@ -177,7 +169,7 @@ print(num_1)
 print(num_1 + 4) #To add from the variable it has to be insiide the brackets (parentheses)
 print("\n")
 #NUMBER FUNCTIONS
-print("NUMBER METHODS")
+print("NUMBER FUNCTIOBS")
 print(str(num_1) + " is fantasic") #Using the "str" function alllows the numbers to transform into a string
 print(abs(num_1)) #abs stands for absolute value, so the absolute value of -4 is 4
 print(pow(num_1 , 4)) #pow stands for power of
@@ -185,7 +177,7 @@ print(pow(6 , 4))
 print(max(2 , 9)) #Prints out the biggest number in the list, to bring out the smallest number use the function min
 print(min(2 , 9))
 print(round(1.9)) #this rounds up decimal numbers
-from math import * #this gives access to more maths Methods
+from math import * #this gives access to more maths fuctions
 print(floor(3.5)) #pring the smaller number
 print(ceil(10.9)) #print the bigger number
 print(sqrt(4)) #print the square toot
@@ -243,52 +235,47 @@ print(character + "is my favourite Character")
 print("++++++++++++++++++++++++++++++++++++\n")
 #9) LISTS
 print("9. LISTS\n")
-print("Lists are used  to organise and structure  large amounts of data")
-Superheros = ["Spider Man" , "Iron Man" , "Captain America" , "Hawkeye" , "Black Widow" , "Falcon" , "Hulk"] 
-# Square brackets are used to hold a list of data in python. it can also hold  other types  of data like strings and/or boolean and/or numbers
+print("Lists are used  t organise and structure  large amounts of data")
+Superheros = ["Spider Man" , "Iron Man" , "Captain America" , "Hawkeye" , "Black Widow" , "Falcon" , "Hulk"] #Square brackets are used to hold a list of data in python. it can also hold  other types  of data like strings and/or boolean and/or numbers
 # index starts at 0 in python, however if you want select the data from the back of the list it starts at !-1
 
 print(Superheros[0])   #this will print the first index which is Spiderman
-
+print(Superheros[-1])  #this will print the last index which is Hulk  pring this as -1 tells python that i want to satart from the back
 print(Superheros[1:])  #this will print out the list staring from iron man
 print(Superheros[2:5]) #This will print out everything from captian america to but not including falcon
-print(Superheros[-1])  #this will print the last index which is Hulk printing this as -1 tells python that i want to start from the last item in the list
-print(Superheros[-1::-1])  #this will print the last in reverse order,from the last item to the first item in the list
-print(Superheros[-1:0:-1])  #this will print the last in reverse order,from the last item to the first item but will ignore 1 item, depending on the index in between the 2 colons. e.g. will not print spiderman because the index is 0
 Superheros[0] = "Thor" #Modifying and changing a selected data in the list, so i changed the first index, which starts from 0 so it's spiderman to thor
+print(Superheros[0])
 
 print("++++++++++++++++++++++++++++++++++++\n")
 #10) LIST FUNCTIONS
-print("10. LISTS METHODS\n")
+print("10. LISTS FUNCTIONS\n")
 
 Football_Numbers = [10 , 11 , 7 , 9 ,8 ,1]
 Avengers = ["Iron Man" , "Captain America" , "Hawkeye" , "Black Widow" , "Falcon" , "Hulk" , "Hulk"]
-Avengers.extend(Football_Numbers) #This Method adds another list of data
-Avengers.append("Ant-Man") #This Method can be used to extra data to th                                                                                                                                                                          m,kuj
-e end of the list
-Avengers.insert(2, "Thor") #This Method inserts another item or data from a selected inmdex and ,moves the rest of the data up 
-Avengers.remove("Falcon") #This Method removes a selected item or data of your choice
-Avengers.clear() #This Method remomes evrything in the list
-Avengers.pop() #This Method remomes the last item in the list
-Avengers.sort () #This Method puts the the list in an alphabetical  order from A-Z, number would go from smallest to biggest 1-100
-Avengers.reverse () #The Method will reverse the way it is printed e.g. 4 , 5, 2 , 6 ,3. it will be printed as 3 , 6 , 2 , 5 , 4
-Avengers2 = Avengers.copy() #This Method just copies the same data
-print(Avengers2)
-#The Method "print (Avengers.index ())" will allow you to search what you're looking for and print it an an index. if you type a name that's not in the list you'll get an error
-#The Method "print (Avengers.count ())" counts how many times an item is listed, so if the data in the list has the word "Hulk" 2x time it will be printed as 2
+Avengers.extend (Football_Numbers) #This Function adds another list of data
+Avengers.append ("Ant-Man") #This function can be used to extra data to the end of the list
+Avengers.insert(2, "Thor") #This function inserts another item or data from a selected inmdex and ,moves the rest of the data up
+Avengers.remove("Falcon") #This Function removes a selected item or data of your choice
+Avengers.clear() #This Function remomes evrything in the list
+Avengers.pop() #This Function remomes the last item in the list
+Avengers.sort () #This Function puts the the list in an alphabetical  order from A-Z, number would go from smallest to biggest 1-100
+Avengers.reverse () #The function will reverse the way it is printed e.g. 4 , 5, 2 , 6 ,3. it will be printed as 3 , 6 , 2 , 5 , 4
+Avengers2 = Avengers.copy() #This function just copies the same data
+print (Avengers2)
+#The function "print (Avengers.index ())" will allow you to search what you're looking for and print it an an index. if you type a name that's not in the list you'll get an error
+#The function "print (Avengers.count ())" counts how many times an item is listed, so if the data in the list has the word "Hulk" 2x time it will be printed as 2
 
 print("++++++++++++++++++++++++++++++++++++\n")
 #11) TUPLES
 print("11. TUPLES\n")
 print("Tuples are similar to lists as they a type of data structure but the difference is they connot be change or modified, i.e. immutable")
 axis = (1 , 2 , 3)  # these curved brackets means that it will stay and cannot be change unlike lists which use square bracket which can be edited
-print(axis [2]) #prints 3
-axis [1] = 4 #This will not work because tuples are immutable and if you run it, you will get an error message
-coordinates = [(1, 2), (3, 4), (5, 6)] #You can make a  tuples list by using "[]" and then use "()". If you do print(coordinates[2]) you will get (5, 6)
+axis [1] = 4 #This will not work because tuples are immutable and if you run it, python will say ther is an error
+print(axis [2])
+#You can list tuples by using "[]" and then use "()"
 
 print("++++++++++++++++++++++++++++++++++++\n")
-
-#12) FUNCTIONS 
+#12) FUNCTIONS#12) FUNCTIONS
 print("12. FUNCTIONS\n")
 
 # To start functions use "def", which stands for, define
@@ -388,19 +375,8 @@ daynames = {
     "Sun" : "Sunday",
 }
 print(daynames["Sat"])
-print(daynames.get("Sun"))# Using daynames.get() is the preferred way to find the "key" and print the "value"
-print(daynames.get("kla", "Not a Valid day name"))
-# If there's no key/value in the dictionary then you can use .get() set a default give it a value, as shown above
-
-capitalise = {
-    "America" : "Washington D.C.",
-    "Japan" : "Tokyo",
-    "China" : "Beijing",
-    "England": "London",
-    }
-
-capitalise.update({"Spain" : "Madrid"}) 
-# Use .update({"key" : "value"})
+print(daynames.get("kla", "Not a Valid day name")) #This is another way to find and print a keyword
+#But if there's not key like the example above, then you can give it a value
 
 print("++++++++++++++++++++++++++++++++++++\n")
 #20) WHILE/FOR LOOP

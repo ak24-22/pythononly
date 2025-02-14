@@ -2,7 +2,7 @@ print("Building a Calculator\n")
 name = input("Enter Your Name: ")
 print("Hi, " + name + "!")
 
-ready = input("Are You Ready?")
+ready = input("Are You Ready?") 
 
 if ready == "y":
     print("Good, let's go!")
