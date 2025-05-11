@@ -27,7 +27,7 @@ print("\n")
 for num in range (5):
     if num == 0:
         print("Woohoo, I'm the Champion")
-    elif:
+    elif num == 1:
         print("Few, I'm 2nd!")
     else:
         print("Noo, I'm last!")

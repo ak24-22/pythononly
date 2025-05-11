@@ -24,8 +24,11 @@ for index in range(5, 15): #this will print out numbers from 5-14 but not 15
 
 print("\n")
 
-for lil3bros in range(len(sibs)):
-    print(sibs[lil3bros])
+# If you want the 2nd loop to work you have to include the sibs lists
+# Otherwise you will get an eror message
+sibs = ["AR", "Yusuf", "Sufyan", "Zayd", "Eamonn"]
+for lil3bros in sibs[-3:]:
+    print(lil3bros)
 
 print("\n")
 
@@ -70,3 +73,19 @@ while i < 11:
          break
      print(i)
      i += 1
+
+a = 3
+while a > 0:
+    print(a)
+    a -= 1
+print("GO!")
+
+
+
+
+
+
+
+
+
+

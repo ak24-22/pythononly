@@ -101,7 +101,7 @@ Python has different data types that are built-in
 ************************************************************************
 Examples of Sequence Types >>
 List:  x = ["apples", "bananas", "pears"] 
-Tuple: x = ([)"apples", "bananas", "pears")
+Tuple: x = ("apples", "bananas", "pears")
 Range: x = range = (9)
 ************************************************************************
 Examples of Mapping Types >>
@@ -146,8 +146,7 @@ print(phrase.lower()) #this is a function that changes the string or text to low
 # To make first letter only upper case just put phrase.capitalize()
 print(len(phrase)) #This Function tells us how many characters are in the string (I.E. The Length
 print(phrase[0]) #This function tells you what the character number. These strings start at 0 and contibue
-print(phrase.index("S")) #This function finds the letter in the string and prints it as a number.
-## If the letter is not in the string and it is printed it will show an error.
+print(phrase.index("S")) #This function finds the letter in the string and prints it as a number. If the letter is not in the string and it is printed it will show an error.
 print("\n")
 movie = "dark knight"
 print(movie)
@@ -186,7 +185,7 @@ print(max(2 , 9)) #Prints out the biggest number in the list, to bring out the s
 print(min(2 , 9))
 print(round(1.9)) #this rounds up decimal numbers
 from math import * #this gives access to more maths Methods
-print(floor(3.5)) #pring the smaller number
+print(floor(3.5)) #print the smaller number
 print(ceil(10.9)) #print the bigger number
 print(sqrt(4)) #print the square toot
 print(10 % 3) #The "%" are knows as mods withe prints the remainder oonly
@@ -222,6 +221,11 @@ print("Nice to meet you, " + name + "!" )
 age = input("Okay,nice. How old are you?: ")
 print("No way, you are only," + age + "!" )
 
+first_name = input("Enter First Name: ")
+last_name = input("Enter Last Name: ")
+
+print(f"You Initials Are: {first_name[0].capitalize()} {last_name[0].capitalize()}") # using and attatching an index like this, "first_name[0]" enables you to print the first character in the string
+
 print("++++++++++++++++++++++++++++++++++++\n")
 #7) BUILDING A CALCULATOR
 print("7. BUILDING A CALCULATOR\n")
@@ -246,7 +250,7 @@ print("9. LISTS\n")
 print("Lists are used  to organise and structure  large amounts of data")
 Superheros = ["Spider Man" , "Iron Man" , "Captain America" , "Hawkeye" , "Black Widow" , "Falcon" , "Hulk"] 
 # Square brackets are used to hold a list of data in python. it can also hold  other types  of data like strings and/or boolean and/or numbers
-# index starts at 0 in python, however if you want select the data from the back of the list it starts at !-1
+# index starts at 0 in python, however if you want select the data from the back of the list it starts at -1
 
 print(Superheros[0])   #this will print the first index which is Spiderman
 
@@ -264,8 +268,7 @@ print("10. LISTS METHODS\n")
 Football_Numbers = [10 , 11 , 7 , 9 ,8 ,1]
 Avengers = ["Iron Man" , "Captain America" , "Hawkeye" , "Black Widow" , "Falcon" , "Hulk" , "Hulk"]
 Avengers.extend(Football_Numbers) #This Method adds another list of data
-Avengers.append("Ant-Man") #This Method can be used to extra data to th                                                                                                                                                                          m,kuj
-e end of the list
+Avengers.append("Ant-Man") #This Method can be used to add extra data to the end of the list
 Avengers.insert(2, "Thor") #This Method inserts another item or data from a selected inmdex and ,moves the rest of the data up 
 Avengers.remove("Falcon") #This Method removes a selected item or data of your choice
 Avengers.clear() #This Method remomes evrything in the list
@@ -301,7 +304,7 @@ print("12. FUNCTIONS\n")
 def say_who_you (name , age) : #To start functions use "def"
     print("You're " + name + " , and you are " + str (age))
 
-say_who_you("Zayd" , 9) #Anything is these brackets is called Arguments
+    say_who_you("Zayd" , 9) #Anything is these brackets is called Arguments
 
 def Joker(mood):
     print (mood)
@@ -377,12 +380,12 @@ else:
 print("++++++++++++++++++++++++++++++++++++\n")
 #17) DICTIONARIES
 print("17. DICTIONARIES\n")
-#In Python, these dictionaries can be used to give a key a value, similar to a real dictionary
+#In Python, these dictionaries can be used in different ways, to give a key a value similar to a real dictionary, item to price, etc... For example:
 daynames = {
     "Mon" : "Monday",
     "Tue" : "Tuesday",
     "Wed" : "Wednesday",
-    "Thurs" : "Thursday",
+    "Thu" : "Thursday",
     "Fri" : "Friday",
     "Sat" : "Saturday",
     "Sun" : "Sunday",
@@ -392,15 +395,20 @@ print(daynames.get("Sun"))# Using daynames.get() is the preferred way to find th
 print(daynames.get("kla", "Not a Valid day name"))
 # If there's no key/value in the dictionary then you can use .get() set a default give it a value, as shown above
 
-capitalise = {
+country_city = {
     "America" : "Washington D.C.",
     "Japan" : "Tokyo",
     "China" : "Beijing",
     "England": "London",
     }
 
-capitalise.update({"Spain" : "Madrid"}) 
-# Use .update({"key" : "value"})
+print(country_city)
+country_city.update({"Spain" : "Madrid"}) 
+# Use .update({"key" : "value"}) to add to the dictionary
+country_city.popitem()
+# Removes the last item in the dictionary (i.e. both, key : value)
+country_city.pop("America")
+# Allows you to remove a specific item of your choice by typing the key only
 
 print("++++++++++++++++++++++++++++++++++++\n")
 #20) WHILE/FOR LOOP
@@ -412,7 +420,7 @@ for letters in "Barnet Hill Academy":
 print("\n")
 
 sibs = ["AR", "Yusuf", "Sufyan", "Zayd", "Eamonn"]
-for brothers in sibs: # Variable brothers can changed to anything. Dont forget to print that variable
+for brothers in sibs: # Variable "brothers" can changed to anything. Dont forget to print that variable
     print(brothers + " is my brother")
 
 print("\n")
@@ -427,8 +435,11 @@ for index in range(5, 15): #this will print out numbers from 5-14 but not 15
 
 print("\n")
 
-for lil3bros in range(len(sibs)):
-    print(sibs[lil3bros])
+# If you want the 2nd loop to work you have to include the sibs lists
+# Otherwise you will get an eror message
+sibs = ["AR", "Yusuf", "Sufyan", "Zayd", "Eamonn"]
+for lil3bros in sibs[-3:]: #sibs[-3:], this is called slicing 
+    print(lil3bros)
 
 print("\n")
 
@@ -446,7 +457,7 @@ pronouns = ["Man", "Woman", "boy", "girl"]
 
 for inam in insectsanimals:
     for noun in pronouns:
-        print(inam, noun) # This will print out every combonation in the lists
+        print(inam, noun) # This will print out every combination in the lists
 
 num = [1, 2, 3, 4,5]
 for no_3 in num:
@@ -468,6 +479,20 @@ print("Done With Loop")
 
 print("\n")
 
+a = 5
+while a > 0:
+    print(a)
+    a -= 1
+print("GO!")
+
+print("\n")
+
+b=10
+while b >0:
+    print(b)
+    b-=2
+
+print("\n")
 i = 0
 while i < 11:
      if i == 6:
@@ -483,7 +508,7 @@ secret_word = "ALIS"
 guess = ""
 guess_count = 0
 guess_limit = 5
-out_of_guesses = True
+out_of_guesses = False
 
 while guess != secret_word and not (out_of_guesses):
     if guess_count < guess_limit:
@@ -501,9 +526,9 @@ print("++++++++++++++++++++++++++++++++++++\n")
 #21) EXPONENT FUNCTION
 print("21. EXPONENT FUNCTION\n")
 
-#Exponen dunction allows you to take number and raise it to to a specific power - like indices
+#Exponent function allows you to take number and raise it to to a specific power - like indices
 
-print(2**3) #This is 2^3 (2 x 2 x 2= 8). "^" means power of
+print(2**2) #This is 2^3 (2 x 2 x 2 = 8). "^" means power of
 
 def powerup (basenum, powernum):
     result = 1
@@ -511,7 +536,7 @@ def powerup (basenum, powernum):
         result = result * basenum
     return result
 
-print(powerup(4, 3))
+print(powerup(4, 2))
 
 print("++++++++++++++++++++++++++++++++++++\n")
 #22) 2D LISTS AND NESTED LOOPS
