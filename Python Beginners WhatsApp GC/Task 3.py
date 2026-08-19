@@ -26,3 +26,17 @@ this_year = int(input("Enter this year: "))
 calc_age = this_year - year_born
 
 print(f"You are {calc_age}")
+
+# more accurate age
+
+year_born = int(input("Enter year born: "))
+month_born = int(input("Enter month born (1-12): "))
+current_year = int(input("Enter current year: "))
+current_month = int(input("Enter current month (1-12): "))
+
+age = current_year - year_born
+
+if current_month < month_born:
+    age-= 1
+
+print(f"You are {age} yeaars old")

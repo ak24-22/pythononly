@@ -25,3 +25,5 @@ hobbies = "\n-Socialising with freinds and family \n-Gaming\n-Watching:\n  -Movi
 
 print(f"Hey, my name is, {name} and my hobbies are: {hobbies}")
 
+
+

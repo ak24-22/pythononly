@@ -36,3 +36,35 @@ if username == correct_uname and password == correct_pw:
 else:
     print("Please check you password or username again")
 
+
+# extra: better login system
+
+# username
+print("Create a new username and password")
+
+fname = input("Enter First Name: ")
+lname = input("Enter Last Name: ")
+yb = input("Enter Year Born: ")
+
+user_name = f"{fname[:3]}{lname[:3]}{yb[-2:]}"
+
+#password
+
+favcolour = input("Enter Favourite Colour: ")
+current_year = input("Enter current year: ")
+pspecchar = input("Enter a special character or punctuation: ")
+
+pass_word = f"{favcolour}{current_year}{pspecchar}"
+
+print("Login to your account")
+
+username = input("Username: ")
+password = input("Password: ")
+
+if user_name == username and pass_word == password:
+    print("Logging in...")
+elif user_name != username or pass_word != password:
+    print("Username or Password is incorrect, please try again")
+else:
+    print("Invalid Response")
+

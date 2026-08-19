@@ -83,7 +83,7 @@ Python has different data types that are built-in
 |_____________________________________________________________________|
 |Numeric  <-------> int, float & complex           x = 6              |
 |---------------------------------------------------------------------|
-|Text     <-------> str                            x = "Spider-Man"   |
+|Text     <-------> str                            y = "Spider-Man"   |
 |---------------------------------------------------------------------|
 |Sequence <-------> list, tuple & range                               |
 ----------------------------------------------------------------------|
@@ -141,12 +141,15 @@ print("I said, \"You are Bat-Mam\" \n")
 
 phrase = "Shrek School Academy" #Giving a String a variable and then pringing it
 print(phrase + " Are For =\n \"Monsters\"") #taking a string and adding another string to it (aka: Concatenation)
+print(f"{phrase} are for Monsters!") # this is called string interpolation using the f-string is the modern way of Concatenation
 print(phrase.lower()) #this is a function that changes the string or text to lower case.
 # To make it all upper case just put phrase.upper()
 # To make first letter only upper case just put phrase.capitalize()
-print(len(phrase)) #This Function tells us how many characters are in the string (I.E. The Length
+# To make first letter on every word upper case just put phrase.title()
+print(len(phrase)) #This Function tells us how many characters are in the string (I.E. The Length)
 print(phrase[0]) #This function tells you what the character number. These strings start at 0 and contibue
 print(phrase.index("S")) #This function finds the letter in the string and prints it as a number. If the letter is not in the string and it is printed it will show an error.
+#.strip() removes the spaces in beginning and end of the string
 print("\n")
 movie = "dark knight"
 print(movie)
@@ -155,6 +158,7 @@ print(movie.upper().isupper()) #This function converts the String to all caps th
 print(movie.replace("dark","moon")) #Changes a selected word for something else
 film = "Dragon and Tiger Gates"
 print(film.startswith("Gates")) #This checks to see if a selected word starts at the beginning of the string 
+# .endswith("string")checks to see if a selected word starts at the end of the string
 
 quantity = 5
 items = 654
@@ -179,16 +183,16 @@ print("\n")
 print("NUMBER METHODS")
 print(str(num_1) + " is fantasic") #Using the "str" function alllows the numbers to transform into a string
 print(abs(num_1)) #abs stands for absolute value, so the absolute value of -4 is 4
-print(pow(num_1 , 4)) #pow stands for power of
+print(pow(num_1 , 4)) #pow stands for power of, it needs 2 numbers base which is the number you start with and exponents which is the number you times it by 
 print(pow(6 , 4))
 print(max(2 , 9)) #Prints out the biggest number in the list, to bring out the smallest number use the function min
 print(min(2 , 9))
-print(round(1.9)) #this rounds up decimal numbers
-from math import * #this gives access to more maths Methods
-print(floor(3.5)) #print the smaller number
-print(ceil(10.9)) #print the bigger number
-print(sqrt(4)) #print the square toot
-print(10 % 3) #The "%" are knows as mods withe prints the remainder oonly
+print(round(1.9)) #this rounds decimal numbers, if .5 it rounds to nearest even number otherwise it rounds to nearest whole number 
+from math import * #this "*" at the end gives access all maths Methods, without it you either type the math.method or type the method after import
+print(floor(3.5)) #rounds down to nearest whole number 
+print(ceil(10.9)) #rounds up to nearest whole number
+print(sqrt(4)) #print the square root
+print(10 % 3) #The "%" are knows as modulo or modulus operator which prints the remainder only, in this case 1
 
 """
 Different Operators
@@ -249,8 +253,11 @@ print("++++++++++++++++++++++++++++++++++++\n")
 print("9. LISTS\n")
 print("Lists are used  to organise and structure  large amounts of data")
 Superheros = ["Spider Man" , "Iron Man" , "Captain America" , "Hawkeye" , "Black Widow" , "Falcon" , "Hulk"] 
-# Square brackets are used to hold a list of data in python. it can also hold  other types  of data like strings and/or boolean and/or numbers
-# index starts at 0 in python, however if you want select the data from the back of the list it starts at -1
+# Square brackets are used to hold a list of data in python. it can also hold  other types  of data like strings, boolean and numbers
+
+# index starts at 0 in python, however if you want to select the data from the end of the list it starts at -1
+
+# if one index is printed, no square bracket will appear, if multiple inex are printed then they will appear
 
 print(Superheros[0])   #this will print the first index which is Spiderman
 
@@ -264,12 +271,12 @@ Superheros[0] = "Thor" #Modifying and changing a selected data in the list, so i
 print("++++++++++++++++++++++++++++++++++++\n")
 #10) LIST FUNCTIONS
 print("10. LISTS METHODS\n")
-
+ 
 Football_Numbers = [10 , 11 , 7 , 9 ,8 ,1]
-Avengers = ["Iron Man" , "Captain America" , "Hawkeye" , "Black Widow" , "Falcon" , "Hulk" , "Hulk"]
+Avengers = ["Iron Man" , "Captain America" , "Hawkeye" , "Black Widow" , "Falcon" , "Hulk"]
 Avengers.extend(Football_Numbers) #This Method adds another list of data
 Avengers.append("Ant-Man") #This Method can be used to add extra data to the end of the list
-Avengers.insert(2, "Thor") #This Method inserts another item or data from a selected inmdex and ,moves the rest of the data up 
+Avengers.insert(2, "Thor") #This Method inserts another item or data from a selected index and ,moves the rest of the data up 
 Avengers.remove("Falcon") #This Method removes a selected item or data of your choice
 Avengers.clear() #This Method remomes evrything in the list
 Avengers.pop() #This Method remomes the last item in the list
@@ -277,7 +284,8 @@ Avengers.sort () #This Method puts the the list in an alphabetical  order from A
 Avengers.reverse () #The Method will reverse the way it is printed e.g. 4 , 5, 2 , 6 ,3. it will be printed as 3 , 6 , 2 , 5 , 4
 Avengers2 = Avengers.copy() #This Method just copies the same data
 print(Avengers2)
-#The Method "print (Avengers.index ())" will allow you to search what you're looking for and print it an an index. if you type a name that's not in the list you'll get an error
+#The Method "print (Avengers.index ())" will allow you to search what you're looking for and print it as an index. if you type a name that's not in the list you'll get an error
+
 #The Method "print (Avengers.count ())" counts how many times an item is listed, so if the data in the list has the word "Hulk" 2x time it will be printed as 2
 
 print("++++++++++++++++++++++++++++++++++++\n")
@@ -332,18 +340,6 @@ print("++++++++++++++++++++++++++++++++++++\n")
 #14) IF STATEMENTS
 print("14. IF STATEMENTS\n")
 
-is_male = False
-is_tall = False
-
-if is_male and is_tall:
-    print("You are a tall male")
-
-elif is_tall and not is_male:
-    print("You are tall but not male")
-elif not is_tall and is_male:
-    print("You are a male but not tall")
-else:
-    print("You are niether male nor tall")
 
 print("++++++++++++++++++++++++++++++++++++\n")
 #15) IF STATEMENTS AND COMPARISONS

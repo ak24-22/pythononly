@@ -4,10 +4,16 @@
 
 # Day 1: Introduction to Python
 # -	Example: Print a welcome message
+print("Welcoome to programming in Python")
 # -	Exercise: Check your Python version
+import sys
+
+print(sys.version) # v1
+print(f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}") # v2
+
 # -	Challenge: Write a script that prints your name and favourite hobby
 
-# -	Day 2: Variables & Data Types
+# -	Day 2: Variables & Data Typeso
 # -	Example: Assign values to variables
 # -	Exercise: Store and display user details
 # -	Challenge: Create a profile generator
@@ -155,3 +161,5 @@
 # 3.	Build a simple expense tracker
 # 4.	Create a Rock-Paper-Scissors game
 # 5.	Build a personal finance calculator
+
+

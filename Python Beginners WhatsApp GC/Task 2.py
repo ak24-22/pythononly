@@ -20,9 +20,8 @@ user_details = {
     "Age": age, 
     "Email": email, 
     "Phone No": phone, 
-    "DOB": dob, 
-    "Address": address
-}
+    "DOB": dob
+    }
 
 for key, value in user_details.items():
     print(f"{key}: {value}")
@@ -55,6 +54,7 @@ def profile_generator():
     "Secondary Email": usemail,
     "Home Address": uhaddress
     }
+    
     print("\n--- User Profile ---")
     for keys, values in profile.items():
         print(f"{keys}: {values}")
@@ -64,7 +64,7 @@ def profile_generator():
 limit = 0
 
 while limit < 5:
-    create_profile = input("Do you want to create a profile? (Enter y/n): ").lower()
+    create_profile = input("Do you want to create a profile? (Enter y/n): ")
 
     if create_profile == "y":
         profile_generator()
@@ -77,3 +77,5 @@ while limit < 5:
 
 if limit == 5:
         print("Cannot create anymore profiles")
+
+
