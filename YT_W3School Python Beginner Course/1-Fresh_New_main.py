@@ -54,7 +54,7 @@ currys = ["Butter Chicken", "Nihari", "kofta", "chicken curry", "lamb curry", "k
 
 characters.extend(tv)
 Takeway_food.append(currys) 
-# append adds another list, 2 separate lists in 1 go 
+# append adds another list, 2 separate lists in 1 making it a nested list 
 # extend joins the 2 list into 1 list, merging them together 
 
 characters.insert(8, "Mikasa") # becomes 8th value and pushes everything after it, to the right. Only add 1 value (index, Object)  
@@ -64,16 +64,23 @@ currys.remove("Butter Chicken") # removes a chosen value from the list. if value
 tv.pop() # removes the last item in the list 
 print(tv.index("DS")) # finds the item in the list and prints the number
 # currys.counts() a checks how many times a chosen value from the list, is repeated 
-print(characters.sort()) # prints the list in asendding order 
-print(characters.reverse()) # prints the list in desending order, 
-
+characters.sort() # sorts the list in ascendding order 
+print(characters) # use the .sort() method first to print the list in asendding order
+characters.reverse() # flips the order
+print(characters) # # use the .reverse() method first to print the list in the flipped order
 donghua_females = ["Gu Xun'er", "Cai Lin", "Ya Fei", "Xiao Wu"]
 donghua_males = ["Xiao Yan", "Tang San", "Dai Mubai", "Oscar"]
 
 donghua_characters = donghua_males + donghua_females
 # create variables with lists
 
-
 print(Takeway_food)
 print(characters)
 print(donghua_characters)
+
+coordinates = (66,67) # tuples can not be changed, deleted or modified, i.e they are immutable
+print(coordinates[1])
+mapx = [(66,67),(3,5),(89,5)]
+print(mapx[1][0])
+
+# tuples use () and lists use []
