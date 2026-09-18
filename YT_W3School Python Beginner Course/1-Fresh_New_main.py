@@ -84,3 +84,57 @@ mapx = [(66,67),(3,5),(89,5)]
 print(mapx[1][0])
 
 # tuples use () and lists use []
+def say_hi(name,age):
+    print("Hello " + name + ", you are " + str(age) + " years old!" )
+
+say_hi("Tony",36)
+
+
+
+def favfood(username,fav_food):
+    return f"{username} favourite food is {fav_food}!"
+
+username = input("Enter You Name: ")
+fav_food = input("Enter Your Favourite Food: ")
+user_fav_food = favfood(username,fav_food)
+
+print(user_fav_food)
+
+def base_x_exponent(base,exponent):
+    result = base ** exponent
+    return f"{base} x {exponent} = {result}"
+
+base = float(input("Enter a number (Base): "))
+exponent = float(input("Enter another number (for Exponents or Indices): "))
+answer = base_x_exponent(base,exponent)
+
+print(answer)
+
+numbers_one = 12
+if numbers_one >= 12:
+    print("You can play")
+else:
+    print("Not ellegible to play")
+
+
+def calc(num1, op, num2):
+    if op == "+":
+        return num1 + num2
+    elif op == "-":
+        return num1 - num2
+    elif op == "*" or op == "x": # or use Membership Operator e.g. op in ["*", "x"] if you have more 2 options
+        return num1 * num2
+    elif op == "/":
+        if num2 == 0:
+            return "Can't divide by 0"
+        return num1 / num2
+    else:
+        return "Invalid Operator. Select: +, -, *, / " 
+num1 = float(input("Enter A Number: "))
+op = input("Enter An Operator: ")
+num2 = float(input("Enter Another Number: "))
+
+calc_answer = calc(num1, op, num2) 
+
+print(calc_answer)
+
