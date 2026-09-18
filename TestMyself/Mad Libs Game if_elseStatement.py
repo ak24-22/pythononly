@@ -7,6 +7,13 @@ print("Hello, " + name.upper() + "!")
 
 ready = input("Are You Ready To Play? (Enter y/n)")
 
+# if ready.lower().startswith("y"):
+#         print("Great, Let's play! \n")
+# else:
+#     print("Oh maybe next time then... ")
+
+
+
 if ready == "Y":
     print("Great, Let's play! \n")
 elif ready == "YE":
