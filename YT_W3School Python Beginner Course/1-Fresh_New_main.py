@@ -138,3 +138,126 @@ calc_answer = calc(num1, op, num2)
 
 print(calc_answer)
 
+daysConvert = {
+    1 : "Monday",
+    2 : "Tuesday",
+    3 : "Wednesday",
+    4 : "Thursday",
+    5 : "Friday",
+    6 : "Saturday",
+    7 : "Sunday"
+}
+
+print(daysConvert.get(8, "Not a day"))
+
+monthConvert = {
+    "Jan" : "January",
+    "Feb" : "February",
+    "Mar" : "March",
+    "Apr" : "April",
+    "May" : "May",
+    "Jun" : "June",
+    "Jul" : "July",
+    "Aug" : "August",
+    "Sep" : "September",
+    "Oct" : "October",
+    "Nov" : "November",
+    "Dec" : "December"
+}
+
+print(monthConvert["Oct"]) # .get() is better
+
+i = 0
+
+while i <= 10:
+    print(i)
+    i += 1 # 0 + 1 = 1
+
+print("Finished listing 0 to 10\n")
+
+k = 10
+
+while k>= 0:
+    print(k) 
+    k-= 1 # 10 - 1 = 9
+
+print("Finished listing 10 to 0")
+
+
+secret_word = "Pizza"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+
+while guess != secret_word and not out_of_guesses:
+    if guess_count < guess_limit:
+        guess = input("Enter the secret word: ")
+        guess_count += 1
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:
+    print("You Lose! You Are Out Of Guesses!")
+else:
+    print("Well Done! You Have Guessed The Word!")
+
+h = 5
+
+while h >= 1:
+  print(i)
+  h-=1
+print("Blast Off!")
+
+
+
+n = int(input("Enter A Number: "))
+
+j = 1
+total = 0
+
+while j <= n:
+  total += j
+  j += 1
+
+print(total)  
+
+
+
+secret = "Deadman"
+password = input("Enter Password: ")
+
+while password != secret:
+  print("Access Denied! Try Again.")
+  password = input("Enter Password: ")
+  
+print("Access Granted!")
+ 
+
+l = 0
+while l <= 20:
+  print(l)
+  l+=2
+
+secret_food = "pizza"
+limit_guesses = 3
+guesses = ""
+count_guesses = 0
+
+while guesses != secret_food and count_guesses < limit_guesses:
+    guesses = input("Guess the word: ") 
+    count_guesses += 1
+
+if guesses == secret_food:
+    print("You Win!")
+else:
+    print("You Lose!")
+
+num = int(input("Enter A Number: "))
+tables = int(input("Enter A Multiplication Table: "))
+g = 1
+
+while g <= tables:
+    print(f"{num} x {tables} = {num * tables}")
+    g+=1
+
