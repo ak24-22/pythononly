@@ -258,6 +258,58 @@ tables = int(input("Enter A Multiplication Table: "))
 g = 1
 
 while g <= tables:
-    print(f"{num} x {tables} = {num * tables}")
+    print(f"{num} x {g} = {num * g}")
     g+=1
+
+numbers = int(input("Enter a number: "))
+count = 0
+
+while numbers > 0:
+    numbers = numbers // 10 # numbers //= 10 
+    count += 1
+
+print(f"{count} digits")
+
+for letter in "Power Rangers":
+    print(letter)
+
+
+avengers = ["Iron Man", "Captain America", "Hawkeyr", "Hulk", "Black Widow"]
+
+for superhero in avengers:
+    print(f"{superhero} is an Avenger")
+
+
+num_table = int(input("Enter Multiplication Table: "))
+
+for n in range(0, 13):
+    print(f"{n} x {num_table} = {n * num_table}")
+
+for index in range(5):
+    if index == 0:
+        print("First Iteration!")
+    else:
+        print("Not First Anymore!")
+
+def raise_to_power(base_num, pow_num):
+    result =1
+    for index in range(pow_num):
+        result = result * base_num
+    return result
+
+print(raise_to_power(2,3))
+
+num_grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [0]
+]
+
+print(num_grid[1][1]) # 5
+
+for rows in num_grid:
+    for col in rows:
+        print(col)
+
 
