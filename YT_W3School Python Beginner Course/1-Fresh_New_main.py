@@ -130,9 +130,16 @@ def calc(num1, op, num2):
         return num1 / num2
     else:
         return "Invalid Operator. Select: +, -, *, / " 
-num1 = float(input("Enter A Number: "))
+
+try:
+    num1 = float(input("Enter A Number: "))
+    num2 = float(input("Enter Another Number: "))
+
+except ValueError:
+    print("Numbers or Decimal Numbers Only")
+    exit()
+
 op = input("Enter An Operator: ")
-num2 = float(input("Enter Another Number: "))
 
 calc_answer = calc(num1, op, num2) 
 
@@ -312,4 +319,44 @@ for rows in num_grid:
     for col in rows:
         print(col)
 
+
+def translate(word):
+    translation = ""
+    for letter in word:
+        if letter.lower() in "aeiou":
+            if letter.isupper():
+                translation = translation + "G"
+            else:
+                translation = translation + "g"
+        else:
+            translation = translation + letter
+    return translation
+
+print(translate(input("Enter A Word: ")))
+
+# try/except
+
+# When it applies: User input — they might type anything, Files — might not exist, Networks — might be down, APIs — might return errors and Parsing data — might be corrupt
+
+# When it doesn't: When you can check with an if instead — like your division-by-zero check
+
+# Why: if handles predictable problems (you know the condition to check). try/except handles unpredictable problems (you can't check everything in advance).
+
+# Check calc() function:
+# --> The user's input → unpredictable (they could type anything) → use try/except
+# --> Division by zero → predictable (you can check if num2 == 0) → use if
+
+# For common operations, you can expect specific errors:
+
+# Operation ============ Common Error
+# int("hello") --------- ValueError
+# float("abc") --------- ValueError
+# int("3.5") ----------- ValueError
+# num / 0 -------------- ZeroDivisionError
+# my_list[99] ---------- IndexError
+# my_dict["missing"] --- KeyError
+# open("nofile.txt") --- FileNotFoundError
+# undefined_variable --- NameError
+
+# Run the code when errors occur. The last line of the error message tells you the error type.
 
