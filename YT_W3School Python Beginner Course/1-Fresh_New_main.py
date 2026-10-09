@@ -1,7 +1,4 @@
 # Python Beginner 
-
-
-
 Sh1 = "Superman"
 Sh2 = "Batman"
 Sh3 = "Aquaman"
@@ -359,6 +356,13 @@ print(translate(input("Enter A Word: ")))
 # undefined_variable --- NameError
 
 # Run the code when errors occur. The last line of the error message tells you the error type.
+
+
+calc_function = open("def_calc_Prodev.py", "r") 
+print(calc_function)
+#calc_function.close()
+
+
 
 
 
