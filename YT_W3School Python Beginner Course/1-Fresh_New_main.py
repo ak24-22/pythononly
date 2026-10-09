@@ -1,4 +1,6 @@
 # Python Beginner 
+
+#Working with Strings
 Sh1 = "Superman"
 Sh2 = "Batman"
 Sh3 = "Aquaman"
@@ -10,6 +12,7 @@ print(f"{Sh2} stopped {Sh1} from killing {Sh3} and innocent people by throwing {
 
 print(len(f"{Sh2} stopped {Sh1} from killing {Sh3} and innocent people by throwing {Krypt_Btrng_num} Kryptonite Batarang.{Sh2} said, {Batman_Speaks.upper()}\n{Sh3} forgave {Sh1}, but {Sh2} was skeptical suspicious, thinking to himself {Batman_Thoughts}"))
 
+
 phrase = "Shrek Academy"
 print(phrase.replace("Shrek", "Monster"))
 
@@ -18,6 +21,7 @@ print(Sh1[4])
 
 print(Batman_Speaks.index("H"))
 
+#Working with Numbers
 fav_num = 3
 print(str(fav_num) + " is my favourite number!") # use str() when concatenation
 
@@ -37,9 +41,12 @@ print(floor(12.5))
 print(ceil(12.5))
 print(sqrt(81))
 
+#Getting Inputs From users
 name = input("Enter your name: ")
 print(f"Good evening, {name}!")
 
+
+#Lists
 characters = ["Gu Xun'er", "Cai Lin", "Ya Fei", "Xiao Yan", "Tang San", "Xiao Wu", "Dai Mubai", "Oscar", "Tanjiro", "Iron Man"]
 print(characters[0:8]) # starts at 0 goes 8th value in list but doesn't include it, printing 7th value Oscar
 
@@ -75,18 +82,19 @@ print(Takeway_food)
 print(characters)
 print(donghua_characters)
 
+#Tuples
 coordinates = (66,67) # tuples can not be changed, deleted or modified, i.e they are immutable
 print(coordinates[1])
 mapx = [(66,67),(3,5),(89,5)]
 print(mapx[1][0])
 
 # tuples use () and lists use []
+
+#Functions
 def say_hi(name,age):
     print("Hello " + name + ", you are " + str(age) + " years old!" )
 
 say_hi("Tony",36)
-
-
 
 def favfood(username,fav_food):
     return f"{username} favourite food is {fav_food}!"
@@ -107,6 +115,7 @@ answer = base_x_exponent(base,exponent)
 
 print(answer)
 
+#If/Else Statements
 numbers_one = 12
 if numbers_one >= 12:
     print("You can play")
@@ -140,6 +149,8 @@ op = input("Enter An Operator: ")
 
 calc_answer = calc(num1, op, num2) 
 
+
+#Dictionaries
 print(calc_answer)
 
 daysConvert = {
@@ -171,6 +182,7 @@ monthConvert = {
 
 print(monthConvert["Oct"]) # .get() is better
 
+#While Loops
 i = 0
 
 while i <= 10:
@@ -187,46 +199,10 @@ while k>= 0:
 
 print("Finished listing 10 to 0")
 
-
-secret_word = "Pizza"
-guess = ""
-guess_count = 0
-guess_limit = 3
-out_of_guesses = False
-
-while guess != secret_word and not out_of_guesses:
-    if guess_count < guess_limit:
-        guess = input("Enter the secret word: ")
-        guess_count += 1
-    else:
-        out_of_guesses = True
-
-if out_of_guesses:
-    print("You Lose! You Are Out Of Guesses!")
-else:
-    print("Well Done! You Have Guessed The Word!")
-
-h = 5
-
-while h >= 1:
-  print(i)
-  h-=1
-print("Blast Off!")
-
-
-
-n = int(input("Enter A Number: "))
-
-j = 1
-total = 0
-
-while j <= n:
-  total += j
-  j += 1
-
-print(total)  
-
-
+l = 0
+while l <= 20:
+  print(l)
+  l+=2
 
 secret = "Deadman"
 password = input("Enter Password: ")
@@ -237,11 +213,6 @@ while password != secret:
   
 print("Access Granted!")
  
-
-l = 0
-while l <= 20:
-  print(l)
-  l+=2
 
 secret_food = "pizza"
 limit_guesses = 3
@@ -272,6 +243,30 @@ while numbers > 0:
     numbers = numbers // 10 # numbers //= 10 
     count += 1
 
+
+#Building a Guessing Game
+secret_word = "Pizza"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+
+while guess != secret_word and not out_of_guesses:
+    if guess_count < guess_limit:
+        guess = input("Enter the secret word: ")
+        guess_count += 1
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:
+    print("You Lose! You Are Out Of Guesses!")
+else:
+    print("Well Done! You Have Guessed The Word!")
+
+
+
+
+#For Loops
 print(f"{count} digits")
 
 for letter in "Power Rangers":
@@ -286,6 +281,7 @@ for superhero in avengers:
 
 num_table = int(input("Enter Multiplication Table: "))
 
+#Exponent Function
 for n in range(0, 13):
     print(f"{n} x {num_table} = {n * num_table}")
 
@@ -303,6 +299,7 @@ def raise_to_power(base_num, pow_num):
 
 print(raise_to_power(2,3))
 
+#2D & Nested Loops
 num_grid = [
     [1, 2, 3],
     [4, 5, 6],
@@ -316,7 +313,7 @@ for rows in num_grid:
     for col in rows:
         print(col)
 
-
+#Build a Translator
 def translate(word):
     translation = ""
     for letter in word:
@@ -357,12 +354,44 @@ print(translate(input("Enter A Word: ")))
 
 # Run the code when errors occur. The last line of the error message tells you the error type.
 
+#Reading Files
+calc_function = open("def_calc_Prodev.py", "r") # finds the file
+print(calc_function.readable()) # checks if file is readable, if you have r = True, if you have w = False
+calc_function.close() # closes the file
 
-calc_function = open("def_calc_Prodev.py", "r") 
-print(calc_function)
-#calc_function.close()
+calc_function = open("def_calc_Prodev.py", "r")
+print(calc_function.read()) # print file content
+calc_function.close() 
 
+calc_function = open("def_calc_Prodev.py", "r")
+print(calc_function.readline()) # print file line by line. prints first line 
+print(calc_function.readline()) #  prints second line 
+print(calc_function.readline()) #  prints third line 
+calc_function.close() 
 
+calc_function = open("def_calc_Prodev.py", "r")
+print(calc_function.readlines()) #  prints file in a list 
+# some files adds an "\n" after each line when you press the enter key 
+calc_function.close() 
+
+calc_function = open("def_calc_Prodev.py", "r")
+print(calc_function.readlines()[0]) #  prints the item index, in this case the first line 
+calc_function.close() 
+
+calc_function = open("def_calc_Prodev.py", "r")
+for calcu in calc_function.readlines(): # loops file and prints all the lines in one go
+    print(calcu.strip()) # the ".strip() remove whitespace from beginning and at the end and including \n"
+
+# white spaces are gaps or spaces and/or tabs
+
+calc_function.close() 
+
+# r = reads file content
+# w = overwrites an existing file content by wiping and starting the file fresh
+# a = adds (or appends) content to the existing file at the end of the file 
+# x = creates a new file if it's not made yet
+
+# Writing to Files
 
 
 
