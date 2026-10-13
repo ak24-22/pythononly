@@ -137,22 +137,17 @@ def calc(num1, op, num2):
     else:
         return "Invalid Operator. Select: +, -, *, / " 
 
-try:
-    num1 = float(input("Enter A Number: "))
-    num2 = float(input("Enter Another Number: "))
-
-except ValueError:
-    print("Numbers or Decimal Numbers Only")
-    exit()
-
+num1 = float(input("Enter A Number: "))
 op = input("Enter An Operator: ")
+num2 = float(input("Enter Another Number: "))
 
 calc_answer = calc(num1, op, num2) 
 
 
-#Dictionaries
 print(calc_answer)
 
+
+#Dictionaries
 daysConvert = {
     1 : "Monday",
     2 : "Tuesday",
@@ -242,6 +237,8 @@ count = 0
 while numbers > 0:
     numbers = numbers // 10 # numbers //= 10 
     count += 1
+
+print(count)
 
 
 #Building a Guessing Game
@@ -371,7 +368,7 @@ calc_function.close()
 
 calc_function = open("def_calc_Prodev.py", "r")
 print(calc_function.readlines()) #  prints file in a list 
-# some files adds an "\n" after each line when you press the enter key 
+# some files includes an "\n" after each line when you press the enter key 
 calc_function.close() 
 
 calc_function = open("def_calc_Prodev.py", "r")
@@ -379,10 +376,10 @@ print(calc_function.readlines()[0]) #  prints the item index, in this case the f
 calc_function.close() 
 
 calc_function = open("def_calc_Prodev.py", "r")
-for calcu in calc_function.readlines(): # loops file and prints all the lines in one go
+for calcu in calc_function.readlines(): # loops file and prints all the lines in one go 
     print(calcu.strip()) # the ".strip() remove whitespace from beginning and at the end and including \n"
 
-# white spaces are gaps or spaces and/or tabs
+# white spaces are gaps or spaces and/or tabs, as well as, new lines
 
 calc_function.close() 
 
@@ -392,6 +389,48 @@ calc_function.close()
 # x = creates a new file if it's not made yet
 
 # Writing to Files
+calc_function = open("def_calc_Prodev.py", "a") 
+calc_function.write("# This is still beginner level")
+calc_function.write("\n# It is more professional, though")
+calc_function.close()
+# Be careful when appending something, this is because if you run the code again, whetever you add it will be repeated on the same line. To add a new line use \n at the beginning
 
+# calc_function = open("def_calc_Prodev2.py", "w") this can used to create a new file. However, if a file with same name already exists then it will be overwritten
 
+# calc_function = open("def_calc_Prodev2.py", "x") this is another way to create a new file and it's safer because if a file with same name already exists then it will cause an error 
 
+#Modules & Pip
+
+#Modules - Use Keyword "import" then type file name without the ".py" and these files contain useful blocks of codes such as, functions, variables, classes, objects, etc...
+# These were created by other Developers and can be made by anyone. 
+# There's 2 types of modules: Built-In & 3rd Party and use Pip to install them:
+# Built-in:  import math, import random, import os, import sys, etc...
+# 3rd Party: import numpy, import torch, import pandas, import datasets etc...
+# Pip is the Package installer and these can be found by searching pypi
+# Package = Folder full of Module files
+# PyPI = Python Package Index (where they are found, usually on pypi.org) 
+# Pip = Preferred installer program
+# OS = Operating System
+# How to use them:
+# 1.
+# import math
+# print(math.ceil(2.5))
+#2.
+# from math import ceil
+# print(ceil(2.5))
+#3. Not Recommended as it can override some function
+# from math import * 
+# print(ceil(2.5))
+# Each module has its own namespace 
+# Namespace = a container for names (functions, variables).
+# "import *" pulls everything into your namespace, so names can clash/override.
+#4
+#import numpy as np (renames it so no need to repeat numpy again)
+# Before
+# # import numpy
+# numpy.sqrt(numpy.array([1, 2, 3]))
+# After
+# import numpy as np
+# np.sqrt(np.array([1, 2, 3]))
+
+#Classes & Objects
