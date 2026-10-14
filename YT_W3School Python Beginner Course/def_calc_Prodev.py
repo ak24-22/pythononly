@@ -5,7 +5,6 @@
 #   while True/break loops
 #   try/except error handling
 
-
 def calc(num1, op, num2):
     if op == "+":
         return num1 + num2
