@@ -434,3 +434,12 @@ calc_function.close()
 # np.sqrt(np.array([1, 2, 3]))
 
 #Classes & Objects
+class Superhero:
+    def __init__(self, name, identity, power, weakness, xfactor):
+        self.name = name
+        self.identity = identity
+        self.power = power
+        self.weakness = weakness
+        self.xfactor = xfactor
+
+#Building a Muliple Choice Quiz
