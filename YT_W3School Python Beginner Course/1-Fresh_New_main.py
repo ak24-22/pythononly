@@ -443,3 +443,8 @@ class Superhero:
         self.xfactor = xfactor
 
 #Building a Muliple Choice Quiz
+
+#q1 what donghua is Xiao Yan from: a: Soul Land b: Battle Through The Heavens c: Demon Hunter 
+#q2 who is Gu Xun'er to Xiao Yan in the end: a: Wife b: Enemy c: Sister
+#q3 who was sealed inside Xiao Yan's ring: a: Queen Medusa b: It Was a Fake Ring c: Yao Lao 
+#q4 where did Xiao Yan and Yun Yun/Yun Zhi first meet: a: Yan Clan b: Magic Beast Mountain Range c: Bangcuet
