@@ -1,4 +1,4 @@
-from Superhero import Superhero
+from Hero import Superhero
 
 batman = Superhero("Batman", "Bruce Wayne", "None", "Only Human", "Peak Human Intelligence")
 

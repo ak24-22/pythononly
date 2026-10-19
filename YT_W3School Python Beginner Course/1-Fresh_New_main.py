@@ -434,17 +434,8 @@ calc_function.close()
 # np.sqrt(np.array([1, 2, 3]))
 
 #Classes & Objects
-class Superhero:
-    def __init__(self, name, identity, power, weakness, xfactor):
-        self.name = name
-        self.identity = identity
-        self.power = power
-        self.weakness = weakness
-        self.xfactor = xfactor
 
-#Building a Muliple Choice Quiz
+#classes are a template that you use to define a new data type that is made by the specific coder
+#objects are created from the class template and they contain the data 
 
-#q1 what donghua is Xiao Yan from: a: Soul Land b: Battle Through The Heavens c: Demon Hunter 
-#q2 who is Gu Xun'er to Xiao Yan in the end: a: Wife b: Enemy c: Sister
-#q3 who was sealed inside Xiao Yan's ring: a: Queen Medusa b: It Was a Fake Ring c: Yao Lao 
-#q4 where did Xiao Yan and Yun Yun/Yun Zhi first meet: a: Yan Clan b: Magic Beast Mountain Range c: Bangcuet
+#Building a Muliple Choice Quiz --> Btth_q_a: class Btth_questions + btth.py: quiz 
