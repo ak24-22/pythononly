@@ -401,7 +401,7 @@ calc_function.close()
 
 #Modules & Pip
 
-#Modules - Use Keyword "import" then type file name without the ".py" and these files contain useful blocks of codes such as, functions, variables, classes, objects, etc...
+# Modules - Use Keyword "import" then type file name without the ".py" and these files contain useful blocks of codes such as, functions, variables, classes, objects, etc...
 # These were created by other Developers and can be made by anyone. 
 # There's 2 types of modules: Built-In & 3rd Party and use Pip to install them:
 # Built-in:  import math, import random, import os, import sys, etc...
@@ -424,7 +424,7 @@ calc_function.close()
 # Each module has its own namespace 
 # Namespace = a container for names (functions, variables).
 # "import *" pulls everything into your namespace, so names can clash/override.
-#4
+# 4
 #import numpy as np (renames it so no need to repeat numpy again)
 # Before
 # # import numpy
@@ -432,10 +432,15 @@ calc_function.close()
 # After
 # import numpy as np
 # np.sqrt(np.array([1, 2, 3]))
+# more examples of using imports are on files: JL_Hero.py and btth.py
 
 #Classes & Objects
 
-#classes are a template that you use to define a new data type that is made by the specific coder
-#objects are created from the class template and they contain the data 
+# classes are a template that you use to define a new data type that is made by the specific coder
+# objects are created from the class template and they contain the data 
+# to acces the data fto, the class objects, type, object.attribute e.g., batman.name
 
-#Building a Muliple Choice Quiz --> Btth_q_a: class Btth_questions + btth.py: quiz 
+# class --> Hero.py, object --> JL_Hero.py
+
+# Building a Muliple Choice Quiz --> Btth_q_a: class Btth_questions + btth.py: quiz 
+
