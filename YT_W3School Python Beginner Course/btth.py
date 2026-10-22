@@ -16,12 +16,12 @@ btth_answers = [
     Btth_questions(btth_qs[4], "B")
 ]
 
-def quiz(Btth_questions):
+def quiz(btth_ans):
     scores = 0
-    for btth_answers in Btth_questions:
-        answers =  input("Answer: " + btth_answers)
-    if answers == btth_answers:
-        scores += 1
-        print(f"Correct! you have got {scores}/{len(btth_answers)}.")
+    for quiz_answers in btth_ans:
+        answers = input(f"Answer: {quiz_answers.question}")
+        if answers.upper() == quiz_answers.answer:
+            scores += 1
+    print(f"Correct! you have got {scores}/{len(btth_ans)}.")
 
-quiz(Btth_questions)
+quiz(btth_answers)

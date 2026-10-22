@@ -12,6 +12,8 @@ green_lantern = Superhero("Green Lantern", "Hal Jordan", "The Ring", "Requires C
 
 aquaman = Superhero("Aquaman", "Arthur Curry", "Super Strength, Aquatic Adaptation, Underwater Communication", "Extreme Heat", "Oceanic Dominance")
 
+# To get answer for a specific data type you need to the attribute e.g., batman.identity prints Bruce Wayne
+
 print(batman)
 print(superman)
 print(wonder_woman)
