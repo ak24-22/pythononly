@@ -5,4 +5,6 @@ class Pet:
         self.hunger = 10
 
     def feed(self,amount):
-        if 
+        self.hunger -= amount
+        print(f"Hunger Level: {self.hunger}")
+        

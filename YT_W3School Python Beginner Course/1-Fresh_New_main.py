@@ -444,3 +444,16 @@ calc_function.close()
 
 # Building a Muliple Choice Quiz --> Btth_q_a: class Btth_questions + btth.py: quiz 
 
+# Object Functions (aka: Class Functions, Class Methods, or just Methods)
+
+# A function that is defined INSIDE a class
+
+# It is written below __init__
+
+# It always takes "self" as the first parameter
+
+# To use it, you call it on the object (e.g., animal.feed(3))
+
+# Inheritence
+
+
